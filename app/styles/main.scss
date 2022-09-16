@@ -1,0 +1,177 @@
+/**************************************************
+
+MAIN CSS FILE
+
+Resources:
+	- https://caniuse.com/
+	- https://css-tricks.com/
+	- https://developer.mozilla.org/en-US/
+
+**************************************************/
+
+/***** ==========================  *****/
+/***** Universal Border-Box Reset  *****/
+/***** ==========================  *****/
+
+	html {
+		box-sizing: border-box;
+	}
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+/***** =======  *****/
+/***** IMPORTS *****/
+/***** =======  *****/
+
+/* Be mindful of the order of your imports */
+/* Once a block of CSS gets big enough, try to break it out into it's own import file */
+	
+	/***** External *****/
+		//@import url("https://use.typekit.net/hce1awn.css");	//Project Typekit link
+
+	/***** Local *****/
+		/***** Diageo Footer *****/
+			@import 'template/dg_footer';		//Diageo footer
+
+		/***** Site Variables - Affectss Template & Custom *****/
+			@import 'vars';	//store vars here
+
+
+		/***** Template - Don't Change *****/
+			@import 'template/template';						//Template base
+			@import 'template/template_responsive';	//Template base - Responsive
+
+
+		/***** Custom - Do Change *****/
+			@import 'custom/fonts';						//Site-specific font setting
+			@import 'custom/functions';				//Functionality-oriented CSS
+			
+
+		/***** Responsive *****/
+			@import 'main_responsive';		//Project Responsive Styling
+			
+			
+		
+		
+
+
+
+/***** ===================  *****/
+/***** Global/Utility Code *****/
+/***** ===================  *****/
+	
+	/***** HTML/Body *****/
+		html, body{
+			color: $text_color;
+			font-family:$font_body;
+		}
+		body {
+			-webkit-text-size-adjust: 100%;  
+		}
+
+
+
+	/***** Utilities *****/
+		.show {
+			display: block !important;
+			color: red; 
+		}
+		.hide {
+			visibility: hidden !important;
+		}
+
+		#DOB_Error, #Phone_Error, #Zip_Error {
+			display: none;
+		}
+
+		.showFooter {
+			visibility: visible !important;
+		}
+
+		.disable{
+			pointer-events: none;
+			opacity: .8;
+		}
+
+
+	/***** Button *****/
+		.button{
+
+			&:hover{
+				
+			}
+		}
+
+/***** ========= *****/
+/*****  DEV CODE  *****/
+/***** ========= *****/
+
+/*****  Left Panel  *****/
+	.left_panel {
+
+	}
+
+/*****  Right Panel  *****/
+	.right_panel {
+
+	}
+
+/*****  Form - can be moved anywhere  *****/
+	.form_content{
+
+	}
+
+/***** ================ *****/
+/***** SECONDARY PAGES  *****/
+/***** ================ *****/
+
+/************************
+Secondary Page Clasess:
+	.secondary,
+	.success,
+	.error,
+	.error_404
+	.closed
+Add to .app element on page
+***********************/
+
+.app.secondary{
+	.body_wrapper{
+		min-height: 100vh;
+	}
+
+	.content_inner{
+		align-items: center;
+		h1{
+			text-align: center;
+		}
+		
+		p{
+			font-size: $font_size_subhead;
+			text-align: center;
+		}
+		.social{
+			font-size: 45px;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+
+			li{
+				padding: 0px 10px;
+
+				a{
+					transition: $transition_medium;
+					&:hover{
+						color: $text_color_alt;
+					}
+				}
+			}
+		}
+
+		.back_to_home{
+			text-align: center;
+		}
+	}
+	
+}

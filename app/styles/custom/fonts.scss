@@ -1,0 +1,76 @@
+/****************************************
+
+FONTS
+
+Resources:
+	- https://fonts.google.com/
+	- https://css-tricks.com/snippets/css/using-font-face/
+	- https://css-tricks.com/snippets/css/system-font-stack/
+	- https://css-tricks.com/typography-for-developers/
+
+****************************************/
+
+
+
+/***** Enhanced System Font *****/
+/* link: https://css-tricks.com/snippets/css/system-font-stack/ */
+	@font-face {
+		font-family: system;
+		font-style: normal;
+		font-weight: 300;
+		src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+	}
+
+/***** Custom Site Fonts *****/
+	@font-face {
+		font-family: 'Baileys Custom';
+		src:  	url('fonts/BaileysDrizzleWeb-Regular.eot') format('eot');
+		src:  	url('fonts/BaileysDrizzleWeb-Regular.woff2') format('woff2'),
+				url('fonts/BaileysDrizzleWeb-Regular.woff') format('woff');
+	}
+
+
+	//NORMAL
+		@font-face {
+			font-family: "Avenir Next";
+			src: url("fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+			font-weight: 400; //normal
+			font-style: normal;
+		}
+
+	//LIGHTER
+		@font-face {
+			font-family: "Avenir Next";
+			src: url("fonts/AvenirNextLTPro-Light.otf") format("opentype");
+			font-weight: 300; //medium
+			font-style: normal;
+		}
+
+	//BOLDER
+		@font-face {
+			font-family: "Avenir Next";
+			src: url("fonts/AvenirNextLTPro-Medium.otf") format("opentype");
+			font-weight: 500; //medium
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: "Avenir Next";
+			src: url("fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+			font-weight: 600;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: "Avenir Next";
+			src: url("fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+			font-weight: 700;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: "Avenir Next";
+			src: url("fonts/AvenirNextLTPro-Heavy.otf") format("opentype");
+			font-weight: 800;
+			font-style: normal;
+		}

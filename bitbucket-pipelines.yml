@@ -1,0 +1,33 @@
+#  Template NodeJS build
+
+#  This template allows you to validate your NodeJS code.
+#  The workflow allows running tests and code linting on the default branch.
+
+image: node:10.24
+
+pipelines:
+  default:
+    - step:
+        name: Build
+        caches:
+          - node
+        script:
+          - npm ci
+          - npm run build
+        artifacts:
+          - dist/*
+          - api/*
+          - .htaccess
+    - step:
+        name: Deploy Dist
+        caches:
+          - node
+        script:
+          - pipe: atlassian/rsync-deploy:0.3.2
+            variables:
+              USER: "ubuntu"
+              SERVER: "52.21.148.109"
+              REMOTE_PATH: "/home/ubuntu/deploy/${BITBUCKET_REPO_SLUG}/"
+              LOCAL_PATH: "${BITBUCKET_CLONE_DIR}/"
+              SSH_PORT: "2517"
+              EXTRA_ARGS: "--omit-dir-times"

@@ -1,0 +1,833 @@
+{
+    "$schema": "http://json-schema.org/draft-03/schema#",
+    "type": "object",
+    "properties": {
+        "ConsumerProfile": {
+            "type": "object",
+            "required": true,
+            "properties": {
+                "Title": {
+                    "type": "string",
+                    "maxLength": 10
+                },
+                "FirstName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "LastName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AlternateFirstName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AlternateLastName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "DOB": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "Gender": {
+                    "type": "integer"
+                },
+                "MaritalStatus": {
+                    "type": "integer"
+                },
+                "NationalID": {
+                    "type": "string",
+                    "maxLength": 30
+                },
+                "PassportNumber": {
+                    "type": "string",
+                    "maxLength": 30
+                },
+                "Education": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Profession": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Suffix": {
+                    "type": "string",
+                    "maxLength": 15
+                },
+                "Company": {
+                    "type": "string",
+                    "maxLength": 80
+                },
+                "MiddleName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AlternateMiddleName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "MaternalLastName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AlternateMaternalLastName": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AlternateTitle": {
+                    "type": "string",
+                    "maxLength": 10
+                },
+                "AlternateSuffix": {
+                    "type": "string",
+                    "maxLength": 15
+                },
+                "Address": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "AddressID": {
+                                "type": "integer"
+                            },
+                            "Address1": {
+                                "type": "string",
+                                "required": true,
+                                "maxLength": 200
+                            },
+                            "Address2": {
+                                "type": "string",
+                                "maxLength": 200
+                            },
+                            "Address3": {
+                                "type": "string",
+                                "maxLength": 200
+                            },
+                            "Address4": {
+                                "type": "string",
+                                "maxLength": 200
+                            },
+                            "City": {
+                                "type": "string",
+                                "maxLength": 100
+                            },
+                            "State": {
+                                "type": "string",
+                                "maxLength": 100
+                            },
+                            "Country": {
+                                "type": "string",
+                                "required": true,
+                                "maxLength": 100
+                            },
+                            "ZipCode": {
+                                "type": "string",
+                                "maxLength": 100
+                            },
+                            "AddressType": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "StateOther": {
+                                "type": "string",
+                                "maxLength": 100
+                            },
+                            "ModifyFlag": {
+                                "type": "string",
+                                "required": true
+                            }
+                        }
+                    }
+                },
+                "Phone": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "PhoneID": {
+                                "type": "integer"
+                            },
+                            "InternationalCode": {
+                                "type": "string",
+                                "maxLength": 10
+                            },
+                            "AreaCode": {
+                                "type": "string",
+                                "maxLength": 10
+                            },
+                            "PhoneNumber": {
+                                "type": "string",
+                                "required": true,
+                                "maxLength": 20
+                            },
+                            "PhoneType": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "Extension": {
+                                "type": "string",
+                                "maxLength": 10
+                            },
+                            "ModifyFlag": {
+                                "type": "string",
+                                "required": true
+                            }
+                        }
+                    }
+                },
+                "PromoCode": {
+                    "type": "array",
+                    "maxItems": 1,
+                    "items": {
+                        "type": "string",
+                        "maxLength": 50
+                    }
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Email": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Id": {
+                                "type": "integer"
+                            },
+                            "EmailId": {
+                                "type": "string",
+                                "required": true,
+                                "maxLength": 320
+                            },
+                            "EmailCategory": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "IsDefaultFlag": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "ModifyFlag": {
+                                "type": "string",
+                                "required": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Preferences": {
+            "type": "object",
+            "properties": {
+                "PromoCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "QuestionCategory": {
+                    "type": "array",
+                    "required": true,
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "CategoryID": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "QuestionAnswers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "QuestionID": {
+                                            "type": "integer",
+                                            "required": true
+                                        },
+                                        "Answer": {
+                                            "type": "array",
+                                            "required": true,
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "OptionID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "ModifyFlag": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    },
+                                                    "BrandID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DrinkCategoryID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "CommunicationChannel": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AnswerText": {
+                                                        "type": "string",
+                                                        "maxLength": 500
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "SocialNetworks": {
+            "type": "object",
+            "properties": {
+                "PromoCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "QuestionCategory": {
+                    "type": "array",
+                    "required": true,
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "CategoryID": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "QuestionAnswers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "QuestionID": {
+                                            "type": "integer",
+                                            "required": true
+                                        },
+                                        "Answer": {
+                                            "type": "array",
+                                            "required": true,
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "OptionID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "ModifyFlag": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    },
+                                                    "BrandID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DrinkCategoryID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "CommunicationChannel": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AnswerText": {
+                                                        "type": "string",
+                                                        "maxLength": 500
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ConversionLocations": {
+            "type": "object",
+            "properties": {
+                "PromoCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "QuestionCategory": {
+                    "type": "array",
+                    "required": true,
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "CategoryID": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "QuestionAnswers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "QuestionID": {
+                                            "type": "integer",
+                                            "required": true
+                                        },
+                                        "Answer": {
+                                            "type": "array",
+                                            "required": true,
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "OptionID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "ModifyFlag": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    },
+                                                    "BrandID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DrinkCategoryID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "CommunicationChannel": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AnswerText": {
+                                                        "type": "string",
+                                                        "maxLength": 500
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "FacebookConnect": {
+            "type": "object",
+            "properties": {
+                "PromoCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "QuestionCategory": {
+                    "type": "array",
+                    "required": true,
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "CategoryID": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "QuestionAnswers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "QuestionID": {
+                                            "type": "integer",
+                                            "required": true
+                                        },
+                                        "Answer": {
+                                            "type": "array",
+                                            "required": true,
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "OptionID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "ModifyFlag": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    },
+                                                    "BrandID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DrinkCategoryID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "CommunicationChannel": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AnswerText": {
+                                                        "type": "string",
+                                                        "maxLength": 500
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "DigitalInteractions": {
+            "type": "object",
+            "properties": {
+                "PromoCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "QuestionCategory": {
+                    "type": "array",
+                    "required": true,
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "CategoryID": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "QuestionAnswers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "QuestionID": {
+                                            "type": "integer",
+                                            "required": true
+                                        },
+                                        "Answer": {
+                                            "type": "array",
+                                            "required": true,
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "OptionID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "ModifyFlag": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    },
+                                                    "BrandID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DrinkCategoryID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "CommunicationChannel": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AnswerText": {
+                                                        "type": "string",
+                                                        "maxLength": 500
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ExtendedProfile": {
+            "type": "object",
+            "properties": {
+                "PromoCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "QuestionCategory": {
+                    "type": "array",
+                    "required": true,
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "CategoryID": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "QuestionAnswers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "QuestionID": {
+                                            "type": "integer",
+                                            "required": true
+                                        },
+                                        "Answer": {
+                                            "type": "array",
+                                            "required": true,
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "OptionID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "ModifyFlag": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    },
+                                                    "BrandID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DrinkCategoryID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "CommunicationChannel": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AnswerText": {
+                                                        "type": "string",
+                                                        "maxLength": 500
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ExtendedOptInPreferences": {
+            "type": "object",
+            "properties": {
+                "PromoCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "QuestionCategory": {
+                    "type": "array",
+                    "required": true,
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "CategoryID": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "QuestionAnswers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "QuestionID": {
+                                            "type": "integer",
+                                            "required": true
+                                        },
+                                        "Answer": {
+                                            "type": "array",
+                                            "required": true,
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "OptionID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "ModifyFlag": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    },
+                                                    "BrandID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DrinkCategoryID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "CommunicationChannel": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AnswerText": {
+                                                        "type": "string",
+                                                        "maxLength": 500
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "HubLifeStyles": {
+            "type": "object",
+            "properties": {
+                "PromoCode": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "AcquisitionSource": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "QuestionCategory": {
+                    "type": "array",
+                    "required": true,
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "CategoryID": {
+                                "type": "integer",
+                                "required": true
+                            },
+                            "QuestionAnswers": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "QuestionID": {
+                                            "type": "integer",
+                                            "required": true
+                                        },
+                                        "Answer": {
+                                            "type": "array",
+                                            "required": true,
+                                            "minItems": 1,
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "OptionID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "ModifyFlag": {
+                                                        "type": "string",
+                                                        "required": true
+                                                    },
+                                                    "BrandID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DrinkCategoryID": {
+                                                        "type": "integer"
+                                                    },
+                                                    "CommunicationChannel": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AnswerText": {
+                                                        "type": "string",
+                                                        "maxLength": 500
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "UserAccount": {
+            "type": "object",
+            "properties": {
+                "LoginCredentials": {
+                    "type": "object",
+                    "properties": {
+                        "LoginName": {
+                            "type": "string",
+                            "required": true,
+                            "maxLength": 70
+                        },
+                        "Password": {
+                            "type": "string",
+                            "maxLength": 50
+                        }
+                    }
+                },
+                "SecretQuestions": {
+                    "type": "object",
+                    "properties": {
+                        "QuestionID": {
+                            "type": "integer",
+                            "required": true
+                        },
+                        "Answer": {
+                            "type": "array",
+                            "required": true,
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "OptionID": {
+                                        "type": "integer"
+                                    },
+                                    "ModifyFlag": {
+                                        "type": "string",
+                                        "required": true
+                                    },
+                                    "BrandID": {
+                                        "type": "integer"
+                                    },
+                                    "DrinkCategoryID": {
+                                        "type": "integer"
+                                    },
+                                    "CommunicationChannel": {
+                                        "type": "integer"
+                                    },
+                                    "AnswerText": {
+                                        "type": "string",
+                                        "maxLength": 500
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

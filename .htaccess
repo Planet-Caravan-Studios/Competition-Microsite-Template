@@ -1,0 +1,29 @@
+Satisfy Any
+SetEnv ENVIROMENT Staging
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+Header always edit Set-Cookie (.*) "$1; HTTPOnly;Secure"
+
+<ifModule mod_rewrite.c>
+
+	RewriteEngine on
+	RewriteBase /
+
+	# --------------
+	# API routes
+	# --------------
+	RewriteRule ^api/(.*)$ api/$1 [L,NC]
+
+	# --------------
+	# Dev: Node.js proxy
+	#   checks domain extension, use the proxy if .dev
+	# --------------
+	#RewriteCond %{HTTP_HOST} ^(.+)\.(test)$
+	RewriteCond %{HTTP_HOST} ^(.+)\.(dev)$
+	RewriteRule ^(.*)$ http://localhost:9000/$1 [NC,L,P]
+
+	# --------------
+	# Production
+	# --------------
+	RewriteRule ^(.*)$ /dist/$1 [NC,L]
+
+</ifModule>

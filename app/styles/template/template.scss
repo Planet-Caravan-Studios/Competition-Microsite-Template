@@ -1,0 +1,659 @@
+body{}
+/*******************************************
+
+GENERAL 
+
+********************************************/
+	
+	/***** ====  *****/
+	/***** ROOT *****/
+	/***** ====  *****/
+		:root{
+			
+		}
+
+
+	/***** ===================== *****/
+	/***** PADDING/MARGIN RESET *****/
+	/***** ===================== *****/
+		body,
+		h1, h2, h3, h4, h5, h6,
+		p, blockquote, pre,
+		dl, dd, ol, ul,
+		form, fieldset, legend,
+		table, th, td, caption,
+		hr {
+			margin: 0;
+			padding: 0; 
+		}
+
+		
+	/***** ========== *****/
+	/***** HTML/BODY *****/
+	/***** ========== *****/
+		html {
+			text-rendering: auto;  /* override this in the custom css file - test what works best */
+			-webkit-font-smoothing: antialiased;
+			font-size: 10px; 	//base document font size -what rem will reference
+		}
+		
+		html, body {
+			min-height: 100%;
+		}
+		
+		body {
+			padding: 0px;
+			width: 100%;
+			height: 100%;
+			font-size: 1.6rem;
+			letter-spacing: .5px;
+			line-height: 1.35;
+			color: $text_color;
+			background-color: $bg_color;
+		}
+
+		
+	/*****===== *****/
+	/*****LINKS *****/
+	/*****===== *****/
+		a {
+			text-decoration: none;
+			color: inherit;
+			cursor: pointer;
+		}
+
+		/***** fallback for unstyled links *****/
+			a:not([class]){
+				text-decoration: underline;
+			}
+
+
+
+	/*****======= *****/
+	/***** IMAGES  *****/
+	/*****======= *****/
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+
+
+	/***** ========  *****/
+	/***** CLEARFIX *****/
+	/***** ========  *****/
+	/* Note: do not apply .clearfix to a flex element */
+		.clearfix:after {
+			display: block;
+			content: '';
+			clear:both;
+		}
+
+	/***** ======  *****/
+	/***** NOLIST *****/
+	/***** ======  *****/
+		.nolist {
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+
+
+	/***** ========== *****/
+	/***** CONTAINER  *****/
+	/***** ========== *****/
+		.container {
+			max-width: 1450px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 35px;
+			box-sizing: border-box;
+			position: relative;
+		}
+
+
+	/***** =========  *****/
+	/***** CUSTOM HR  *****/
+	/***** =========  *****/
+		.custom_hr{
+			display: block;
+			width: 100%;
+			max-width: 350px;
+			border-bottom: solid 1px;
+			margin: 50px auto;
+		}
+
+
+	/***** =========  *****/
+	/***** CUSTOM BR  *****/
+	/***** =========  *****/
+		.custom_br{
+			display: block;
+			
+		}
+
+
+	/***** ========  *****/
+	/*****  BUTTONS  *****/
+	/***** ========  *****/
+		.button{
+			display: inline-block;
+			font-family: $font_display, sans-serif;
+			font-weight: 700;
+			font-size: $font_size_input;
+			letter-spacing: 1px;
+			padding: 15px 15px 10px;
+			border-radius: 20px;
+			background-color: transparent;
+			border:solid 2px;
+			cursor: pointer;
+			transition: $transition_medium;
+
+			&:hover{
+				color: $text_color_alt;
+				background-color: $text_color;
+				border-color: $text_color_alt;
+			}
+		}
+
+
+
+
+
+
+
+/********************************************
+
+General Template Layout
+
+	- 	The panel html structure should be: 
+		_panel > _content > elements
+********************************************/
+	
+	/* Set left and right panel layout */
+		.body_wrapper{
+			display: flex;
+			flex-direction: row;
+			justify-content: center
+		}
+
+		.body_wrapper > .left_panel{
+			width: 50%;
+			height: auto;
+			position: relative;
+		}
+		.body_wrapper > .right_panel{
+			width: 50%;
+			height: auto;
+			position: relative;
+		}
+
+
+		/***** ========== *****/
+		/***** Left Panel *****/
+		/***** ========== *****/
+
+			$inner_content_width: 650px;;
+
+			/***** Logo *****/
+
+				.left_panel .logo_content{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					padding: 50px 35px;
+					
+				}
+				
+
+			/***** Body Copy *****/
+				.left_panel .body_copy {
+					display: flex;
+					justify-content: center;
+					align-items:center;
+					margin-bottom: 50px;
+
+					.copy_inner{
+						width: 100%;
+						max-width: $inner_content_width;
+						padding: 0px 15px;
+						text-align: center;
+
+						h1{
+							font-family: $font_display;
+						}
+
+						p{
+							color: $text_color;
+							font-size: $font_size_body;
+							font-weight: 400; 
+
+							strong{font-weight: 700;}
+							
+						}
+					}
+				}
+			
+
+
+		/***** =========== *****/
+		/***** Right Panel *****/
+		/***** =========== *****/
+
+			$inner_content_width: 650px;
+
+			.right_panel{
+				
+				padding: 50px 15px 50px;
+			}
+			/***** Background *****/
+				.right_panel .right_panel_background{
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				.right_panel .right_panel_background > .img_panel{
+					background-size: cover;
+					background-position: center top;
+					background-repeat: no-repeat;
+
+					height: 100%;
+					width: 100%;
+					position: relative;
+					z-index: 10;
+				}
+
+			/***** Content *****/
+				.right_panel .right_panel_content{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: flex-start;
+					
+					max-width: $inner_content_width;
+					width: 100%;
+					height: auto;
+					
+					background-color: rgba($white,.75);
+					
+					margin: 0px auto 50px;
+					padding: 35px 35px 50px;
+					position: relative;
+					z-index: 12;
+					
+					box-shadow:
+						0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+						0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+						0 12.5px 10px rgba(0, 0, 0, 0.035),
+						0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+						0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+						0 100px 80px rgba(0, 0, 0, 0.07)
+					;
+
+
+					/***** Text *****/
+						.heading{
+							font-size: $font_size_subhead;
+							line-height: .8em;
+							text-align:center;
+							margin-bottom: 15px;
+						}
+
+						p{
+
+						}
+
+						ul{
+							width: 100%;
+							max-width: 400px;
+							margin: auto;
+
+							li{
+								margin-bottom: 10px;
+							}
+						}
+						
+				}
+
+				
+
+/********************************************
+
+FORM
+
+********************************************/
+
+	.form_content{
+		width: 100%;
+		position: relative;
+		background-color: $light_grey;
+		z-index: 10;
+		padding-bottom: 50px;
+
+
+		/***** Form Header *****/
+		.form_header{
+			background-color: $red;
+			text-align: center;
+			color: $white;
+			font-size: 34px;
+			padding: 10px 15px;
+			font-weight: 100;
+			position: relative;
+			z-index: 12;
+			margin-bottom: 35px;
+
+			p{
+				margin: 0;
+				font-weight: 100;
+			}
+		}
+
+
+		/***** Background Elements *****/
+		.bg_elements{
+			position: absolute;
+			top:0;
+			height: 100%;
+			width:100%;
+			overflow: hidden;
+			z-index: 11;
+			pointer-events:none;
+
+			.bg_element_left{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+
+			.bg_element_right{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+
+		/***** Form Inner *****/
+		.form_inner{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			max-width: $inner_content_width;
+			width: 100%;
+			margin: 0px auto 50px;
+			background-color: rgba($white, .45);
+			padding: 15px;
+			position: relative;
+			z-index: 12;
+			box-shadow:
+				0 2.8px 2.2px rgba($black, 0.02),
+				0 6.7px 5.3px rgba($black, 0.028),
+				0 12.5px 10px rgba($black, 0.035),
+				0 22.3px 17.9px rgba($black, 0.042),
+				0 41.8px 33.4px rgba($black, 0.05),
+				0 100px 80px rgba($black, 0.07)
+			;
+
+
+			.left_panel  .form_content>.form_inner form{
+				z-index: 12;
+				position: relative;
+				color : $text_color;
+			}
+		}
+
+
+		/***** Form Meta *****/
+		.form_meta{
+			display: none;
+		}
+
+		/***** Form Cells & Inputs *****/
+		.flex_row{
+			display: flex;
+			flex-direction:row;
+			flex-wrap: wrap;
+		}
+		.form_cell{
+			width: 100%;
+			padding: 10px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			flex-direction: column;
+			margin:0;
+
+			&.half{
+				width: 50%;
+
+				@media only screen and (max-width : $breakpoint_1) {
+					width: 100%;
+				}
+			}
+
+			&.column{
+				flex-direction: column;
+				justify-content: center;
+
+				/*label{
+					width: 100% !important;
+					margin-bottom:10px;
+				}
+				input{
+					width: 100% !important;
+				}*/
+			}
+
+
+			/***** Text Inputs *****/
+			//$label_width: 100px;
+
+			label{
+				color:$text_color;
+				padding-right: 5px;
+				//width: $label_width;
+				display: inline-block;
+				width: 100%;
+			}
+
+			input{
+				width: 100%;
+				padding: 5px;
+				border: solid 1px $text_color;
+				border-radius: 0px;
+				//width: calc(100% - #{$label_width} );
+			}
+
+			::placeholder{
+				color: $text_color;
+				opacity: 1;
+			}
+
+			#charNum{
+				margin: 10px 0;
+			}
+			
+			/***** Selects *****/
+			.select-wrapper{
+				position: relative;
+				width: 100%;
+			}
+			select{
+				//width: calc(100% - #{$label_width} );
+				width: 100%;
+				padding: 5px 30px 5px 5px;
+				border: solid 1px $text_color;
+				border-radius: 0px;
+				appearance: none;
+				cursor: pointer;
+
+				& + .icon{
+					position: absolute;
+					top: calc(50% + 3px);
+					right: 10px;
+					transform: translateY(-50%);
+					color: $black;
+					font-size: 1em;
+					pointer-events: none;
+				}
+			}
+
+			/***** File Upload *****/
+			input[type="file"]{
+				display: none;
+			}
+
+			label.button{
+				padding-left: 15px;
+				padding-right: 15px;
+				&:hover{
+					color: $text_color_alt;
+				}
+			}
+		}
+
+
+
+		/***** Checkboxes *****/
+		.accept{
+			text-align: left;
+			margin-bottom: 15px;
+			padding: 5px 15px;
+
+			label{
+				font-size: $font_size_body;
+				font-weight: 400;
+				margin-bottom: 0px;
+				display:flex;
+				align-items: center;
+				justify-content: flex-start;
+
+			}
+			label>span{
+				font-size: $font_size_details;
+				font-weight: 400;
+				padding-left:  5px;
+			}
+			input{
+				display: inline-block;
+				margin-right: 5px;
+				width: 20px;
+			}
+			span{
+				font-size: $font_size_details;
+				font-weight: 400;
+				padding-left:  20px;
+				width: calc(100% - 20px);
+			}
+		}
+		
+
+		/***** Terms *****/
+		.terms{
+			font-size: $font_size_details;
+			width: 100%;
+			max-width: 460px;
+		}
+
+		/***** Eligible Copy *****/
+		.eligible-copy{
+			width: 100%;
+			color: $text_color;
+			font-size: $font_size_details;
+			font-weight: 100;
+			padding: 0 15px;
+		}
+
+		/***** Submit *****/
+		.form-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 35px 0 15px;
+		}
+
+		/***** Validation *****/
+		.valWarning{
+			width: 100%;
+		}
+
+
+		/***** After Form *****/
+		.after_form{
+			width: 100%;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			color: $text_color;
+			font-size: $font_size_details;
+			z-index: 12;
+			position: relative;
+			padding: 15px;
+
+			.inner{
+				width: 100%;
+				max-width: $inner_content_width;
+
+
+				.purchase-copy{
+					width: 100%;
+					//color: $text_color;
+					font-weight: 100;
+				}
+				.rules-copy{
+					width: 100%;
+					//color: $text_color;
+					font-weight: 100;
+				}
+
+				.legal>p{
+					//color: $text_color;
+					font-weight: 100;
+				}
+				
+			}
+		}
+
+	}
+
+
+		
+/********************************************
+
+SUCCESS PAGE
+
+Page Class: .success_page
+
+********************************************/
+
+
+/********************************************
+
+ERROR PAGE
+
+********************************************/
+
+
+/********************************************
+
+404 PAGE
+
+********************************************/
+
+
+/********************************************
+
+CLOSE PAGE
+
+*******************************************/
+

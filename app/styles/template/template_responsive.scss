@@ -1,0 +1,33 @@
+/********************************************
+
+NOTES
+
+	Breakpoints:
+		- 1150px
+		- 950px
+		- 550px
+	*See _vars.scss for variable breakpoints
+
+
+	MEDIA QUERY EXAMPLES
+		- Standard: 	@media only screen and (max-width : 950px) { 	}
+		- Range: 		@media only screen and (min-width : 950px) and (max-width : 1250px) { 	}
+		- IE-only: 		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {	}
+		- Print:		@media print {		}
+
+********************************************/
+
+@media only screen and (max-width : $breakpoint_1) { 	
+	.body_wrapper{
+		flex-direction: column;
+	}
+
+	.body_wrapper > .left_panel{
+		width: 100%;
+	}
+	.body_wrapper > .right_panel{
+		width: 100%;
+		height: auto;
+		min-height: 550px;
+	}
+}

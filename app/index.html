@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	
+	<!-- ============= -->
+	<!-- SITE METADATA  -->
+	<!-- ============= -->
+		<!-- Standard  -->
+			<meta charset="UTF-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+			<title>[THORIUM_STARTER_PROJECT] | [THORIUM_STARTER_PROJECT]</title>
+			<meta name="description" content="[THORIUM_STARTER_PROJECT]">
+			<meta name="keywords" content="[THORIUM_STARTER_PROJECT]">
+			<!--
+				<link rel="icon" href="images/favicon.ico" type="image/x-icon" /
+			-->
+	
+		<!-- OG/Facebook -->
+			<meta property="og:title" content="" />
+			<meta property="og:description" content="" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="" />
+			<!-- FB social share images uses a 1200x630 resolution -->
+			<meta property="og:image" content="" />
+	
+		<!-- Twitter -->
+			<meta name="twitter:title" content="" />
+			<meta name="twitter:description" content="" />
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:url" content="" />
+			<!-- Twitter social share images uses a 1024x512 resolution -->
+			<meta name="twitter:image" content="" />
+
+	<!-- ========== -->
+	<!-- RESOURCES -->
+	<!-- ========== -->
+
+		<!-- Fonts -->
+
+			<!-- Starter Project Fonts-->
+				<link rel="preconnect" href="https://fonts.gstatic.com">
+				<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+		<!-- CDN Scripts -->
+			
+			<!-- Normalize -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+
+			<!-- Font Awesome -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	
+			<!-- jQuery UI -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" integrity="sha512-urpIFwfLI9ZDL81s6eJjgBF7LpG+ROXjp1oNwTj4gSlCw00KiV1rWBrfszV3uf5r+v621fsAwqvy1wRJeeWT/A==" crossorigin="anonymous" />
+
+	<!-- ============ -->
+	<!-- MAIN SITE CSS -->
+	<!-- ============ -->
+		<!-- build:css /styles/main.css -->
+			<link rel="stylesheet" href="/styles/main.css" />
+		<!-- endbuild -->
+	
+
+
+	<!-- =============== -->
+	<!-- JS - TOP OF PAGE -->
+	<!-- =============== -->
+		
+		<!-- Diageo Age Gate -->
+			<script type="text/javascript">
+				function onPass() {
+					// Agegate bug workaround
+					setTimeout(function () {
+						var _height = $("body").height();
+						$("body").removeAttr("style");
+						$("body").height(_height);
+						$("#age_gate").remove();
+					}, 500);
+				}
+			</script>
+
+
+</head>
+
+<body class="app" style="opacity: 0; /* FOUC - overriden in MAIN.JS */">
+	<div class="body_wrapper">
+		
+
+	<!-- ============================ -->
+	<!-- LEFT PANEL - Copy, Form, Legal -->
+	<!-- ============================ -->
+
+		<div id="formContainer" class="left_panel panel" style="background-image: none;">
+			
+
+
+			<!-- COPY CONTENT -->
+			<div class="copy_content">
+				<div class="content_inner">
+					
+					<!-- LOGO -->
+					<div class="logo_content">
+						<a href="/" aria-label="Logo - Back to Home">
+							<!-- PRIMARY BRAND LOGO -->
+							<img class="logo" src="https://placehold.jp/150x150.png" alt="BRAND LOGO"  />
+						</a>
+						
+						<!-- SECONDARY BRAND/PRODUCT LINE LOGO -->
+						<img class="sub_logo" src="https://placehold.jp/150x150.png" alt="BRAND SUBLOGO" role="presentation"  />
+					</div>
+
+					<!-- BODY COPY --> 
+					<div class="body_copy">
+						
+						<!-- Body Copy Inner --> 
+						<div class="copy_inner">
+							<h1>H1 - PRIMARY PAGE TITLE</h1>
+
+							<div class="custom_hr" role="presentation"></div>
+
+							<p>
+								The first SCSS file you should probably look at is _vars.scss.  Set primary site style variables (fonts, font sizes, colors, anything used repeatedly) in the _vars.scss file, which will then cascade down to both the <strong>TEMPLATE</strong> and <strong>MAIN</strong> SCSS files.
+							</p>
+							
+							<div class="custom_hr" role="presentation"></div>
+
+							<p>
+								Custom, project-specific changes should be done in the <strong>MAIN</strong> SCSS files, and the <strong>TEMPLATE</strong> SCSS files should largely be left alone and overridden in the <strong>MAIN</strong> files.  The <strong>TEMPLATE</strong> SCSS files are intended to be the underlying framework of this starter project, with the <strong>MAIN</strong> files handling any code that is specific to the job you're working.  If you have a problem or suggestion, reach out to <a href="mailto: areimel@thoriumdigital.com">areimel@thoriumdigital.com</a>.
+							</p>
+							
+							<div class="custom_hr" role="presentation"></div>
+
+							<p>
+								This starter project is meant to be unopinionated (ie, not designed with any particular project in mind), while also providing you with as much support and features as possible.  Also, there's a cute red panda.
+							</p>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+				
+			
+			<!-- FORM CONTENT -->
+			<div class="form_content">
+
+				<!-- Form Header -->
+				<div class="form_header">
+					<h2>H2 - Form Section Header</h2>
+				</div>
+
+				<!-- Background Elements - position:absolute; -->
+				<div class="bg_elements">
+					<img class="bg_element_left" 
+						src="https://placehold.jp/80x800.png" 
+						alt="" role="presentation" 
+					/>
+					
+					<img class="bg_element_right" 
+						src="https://placehold.jp/80x800.png" 
+						alt="" role="presentation" 
+					/>
+				</div>
+				
+				<!-- Form Content Inner  -->
+				<div class="form_inner">
+					<form id="cidbForm" class="guinness-form" runat="server" action="/api/CIDBapi_Form.php" method="post">
+
+						
+						<!-- ========= -->
+						<!-- Form Meta -->
+						<!-- ========= -->
+						<div class="form_meta">
+							
+							<!-- [SEARCH-PROMOCODE] -->
+								<input id="HD_PromoCode" name="HD_PromoCode" runat="server" type="hidden" value="DNA107BAL1120WC0008" />
+
+							<!-- Country 1 - move into form main if needed -->
+							<!-- required for any address fields to work, can be overridden -->
+								<div class="form_cell" style="display: none;">
+									<label for="CP_Country">Country</label>
+									
+									<select id="CP_Country" class="countrySelect" name="CP_Country" required="required" runat="server">
+										<option value="UK" selected>United Kingdom</option>
+									</select>
+								</div>
+
+							<!-- Country 2 - move into form main if needed -->
+								<div class="form_cell" style="display: none;">
+									<label for="PR_4_92_1">Country of Residence</label>
+									
+									<select id="PR_4_92_1" class="countrySelect" name="PR_4_92_1" required="required" runat="server">
+										<option value="75">GB-UNITED KINGDOM</option>
+										<option value="99">IE-REPUBLIC OF IRELAND</option>
+									</select>
+								</div>
+
+							<!-- Address -->
+								<div class="form_cell" style="display: none;">
+									<label for="CP_Address1">Address</label>
+									
+									<input id="CP_Address1" name="CP_Address1" maxlength="200" type="text" placeholder="" runat="server" value="N/A" />
+									
+									<input id="HD_AddressType" name="HD_AddressType" runat="server" type="hidden" value="1" />
+								</div>
+
+
+							<!-- Brand -->
+								<input id="HD_PR_1_64_1_Brand" name="HD_PR_1_64_1_Brand" runat="server" type="hidden" value="8" />
+
+
+
+							<!-- Extra fields, no need to update -->
+								<input id="HD_Consumerid" name="HD_Consumerid" runat="server" type="hidden" value="" />
+								<input id="HD_IsDefaultFlag" name="HD_IsDefaultFlag" runat="server" type="hidden" value="1" />
+								<input id="HD_PR_1_64_1_Comm" name="HD_PR_1_64_1_Comm" runat="server" type="hidden" value="1" />
+								<input id="HD_IsDefaultFlag" name="HD_IsDefaultFlag" runat="server" type="hidden" value="1" />
+								<input id="PR_4_367_1_freetext" name="PR_4_367_1_freetext" type="hidden" placeholder="" runat="server"value="" />
+							
+						</div>
+
+						
+
+						<!-- First Name -->
+						<div class="form_cell">
+							<label for="CP_FirstName">FIRST NAME*</label>
+							
+							<input id="CP_FirstName" name="CP_FirstName" class="guinness-form-input" maxlength="50" type="text" required="required" runat="server" />
+						</div>
+
+						<!-- Last Name -->
+						<div class="form_cell">
+							<label for="CP_LastName">LAST NAME*</label>
+							
+							<input id="CP_LastName" name="CP_LastName" class="guinness-form-input" maxlength="50" type="text" placeholder="" required="required" runat="server" />
+						</div>
+
+						<!-- Phone Number -->
+						<div class="form_cell">
+							<label for="CP_PhoneNumber">PHONE NUMBER*</label>
+
+							<input id="CP_PhoneNumber" onfocusout="fixNumber()" class="guinness-form-input" name="CP_PhoneNumber" type="tel"  required="required" runat="server" />
+
+							<input id="HD_PhoneType" name="HD_PhoneType" runat="server" type="hidden" value="3" />
+
+							<div id="Phone_Error" class="Phone_Error">
+								Please enter your phone number, numbers only
+							</div>
+						</div>
+
+						<!-- Address -->
+						<div class="form_cell" style="display: none;">
+							<label for="CP_Address1">Address</label>
+							
+							<input id="CP_Address1" name="CP_Address1" maxlength="200" type="text" placeholder="" runat="server" value="N/A" />
+							
+							<input id="HD_AddressType" name="HD_AddressType" runat="server" type="hidden" value="1" />
+						</div>
+
+						<div class="form_cell">
+							<label for="CP_Country">Country</label>
+							<div class="select-wrapper">
+								<select id="CP_Country" class="countrySelect" name="CP_Country" required="required" runat="server">
+									<option disabled selected  ></option>
+									<option value="AF">Afghanistan</option>
+									<option value="AX">Åland Islands</option>
+									<option value="AL">Albania</option>
+									<option value="DZ">Algeria</option>
+									<option value="AS">American Samoa</option>
+									<option value="AD">Andorra</option>
+									<option value="AO">Angola</option>
+									<option value="AI">Anguilla</option>
+									<option value="AQ">Antarctica</option>
+									<option value="AG">Antigua and Barbuda</option>
+									<option value="AR">Argentina</option>
+									<option value="AM">Armenia</option>
+									<option value="AW">Aruba</option>
+									<option value="AU">Australia</option>
+									<option value="AT">Austria</option>
+									<option value="AZ">Azerbaijan</option>
+									<option value="BS">Bahamas</option>
+									<option value="BH">Bahrain</option>
+									<option value="BD">Bangladesh</option>
+									<option value="BB">Barbados</option>
+									<option value="BY">Belarus</option>
+									<option value="BE">Belgium</option>
+									<option value="BZ">Belize</option>
+									<option value="BJ">Benin</option>
+									<option value="BM">Bermuda</option>
+									<option value="BT">Bhutan</option>
+									<option value="BO">Bolivia, Plurinational State of</option>
+									<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+									<option value="BA">Bosnia and Herzegovina</option>
+									<option value="BW">Botswana</option>
+									<option value="BV">Bouvet Island</option>
+									<option value="BR">Brazil</option>
+									<option value="IO">British Indian Ocean Territory</option>
+									<option value="BN">Brunei Darussalam</option>
+									<option value="BG">Bulgaria</option>
+									<option value="BF">Burkina Faso</option>
+									<option value="BI">Burundi</option>
+									<option value="KH">Cambodia</option>
+									<option value="CM">Cameroon</option>
+									<option value="CA">Canada</option>
+									<option value="CV">Cape Verde</option>
+									<option value="KY">Cayman Islands</option>
+									<option value="CF">Central African Republic</option>
+									<option value="TD">Chad</option>
+									<option value="CL">Chile</option>
+									<option value="CN">China</option>
+									<option value="CX">Christmas Island</option>
+									<option value="CC">Cocos (Keeling) Islands</option>
+									<option value="CO">Colombia</option>
+									<option value="KM">Comoros</option>
+									<option value="CG">Congo</option>
+									<option value="CD">Congo, the Democratic Republic of the</option>
+									<option value="CK">Cook Islands</option>
+									<option value="CR">Costa Rica</option>
+									<option value="CI">Côte d'Ivoire</option>
+									<option value="HR">Croatia</option>
+									<option value="CU">Cuba</option>
+									<option value="CW">Curaçao</option>
+									<option value="CY">Cyprus</option>
+									<option value="CZ">Czech Republic</option>
+									<option value="DK">Denmark</option>
+									<option value="DJ">Djibouti</option>
+									<option value="DM">Dominica</option>
+									<option value="DO">Dominican Republic</option>
+									<option value="EC">Ecuador</option>
+									<option value="EG">Egypt</option>
+									<option value="SV">El Salvador</option>
+									<option value="GQ">Equatorial Guinea</option>
+									<option value="ER">Eritrea</option>
+									<option value="EE">Estonia</option>
+									<option value="ET">Ethiopia</option>
+									<option value="FK">Falkland Islands (Malvinas)</option>
+									<option value="FO">Faroe Islands</option>
+									<option value="FJ">Fiji</option>
+									<option value="FI">Finland</option>
+									<option value="FR">France</option>
+									<option value="GF">French Guiana</option>
+									<option value="PF">French Polynesia</option>
+									<option value="TF">French Southern Territories</option>
+									<option value="GA">Gabon</option>
+									<option value="GM">Gambia</option>
+									<option value="GE">Georgia</option>
+									<option value="DE">Germany</option>
+									<option value="GH">Ghana</option>
+									<option value="GI">Gibraltar</option>
+									<option value="GR">Greece</option>
+									<option value="GL">Greenland</option>
+									<option value="GD">Grenada</option>
+									<option value="GP">Guadeloupe</option>
+									<option value="GU">Guam</option>
+									<option value="GT">Guatemala</option>
+									<option value="GG">Guernsey</option>
+									<option value="GN">Guinea</option>
+									<option value="GW">Guinea-Bissau</option>
+									<option value="GY">Guyana</option>
+									<option value="HT">Haiti</option>
+									<option value="HM">Heard Island and McDonald Islands</option>
+									<option value="VA">Holy See (Vatican City State)</option>
+									<option value="HN">Honduras</option>
+									<option value="HK">Hong Kong</option>
+									<option value="HU">Hungary</option>
+									<option value="IS">Iceland</option>
+									<option value="IN">India</option>
+									<option value="ID">Indonesia</option>
+									<option value="IR">Iran, Islamic Republic of</option>
+									<option value="IQ">Iraq</option>
+									<option value="IE">Ireland</option>
+									<option value="IM">Isle of Man</option>
+									<option value="IL">Israel</option>
+									<option value="IT">Italy</option>
+									<option value="JM">Jamaica</option>
+									<option value="JP">Japan</option>
+									<option value="JE">Jersey</option>
+									<option value="JO">Jordan</option>
+									<option value="KZ">Kazakhstan</option>
+									<option value="KE">Kenya</option>
+									<option value="KI">Kiribati</option>
+									<option value="KP">Korea, Democratic People's Republic of</option>
+									<option value="KR">Korea, Republic of</option>
+									<option value="KW">Kuwait</option>
+									<option value="KG">Kyrgyzstan</option>
+									<option value="LA">Lao People's Democratic Republic</option>
+									<option value="LV">Latvia</option>
+									<option value="LB">Lebanon</option>
+									<option value="LS">Lesotho</option>
+									<option value="LR">Liberia</option>
+									<option value="LY">Libya</option>
+									<option value="LI">Liechtenstein</option>
+									<option value="LT">Lithuania</option>
+									<option value="LU">Luxembourg</option>
+									<option value="MO">Macao</option>
+									<option value="MK">Macedonia, the former Yugoslav Republic of</option>
+									<option value="MG">Madagascar</option>
+									<option value="MW">Malawi</option>
+									<option value="MY">Malaysia</option>
+									<option value="MV">Maldives</option>
+									<option value="ML">Mali</option>
+									<option value="MT">Malta</option>
+									<option value="MH">Marshall Islands</option>
+									<option value="MQ">Martinique</option>
+									<option value="MR">Mauritania</option>
+									<option value="MU">Mauritius</option>
+									<option value="YT">Mayotte</option>
+									<option value="MX">Mexico</option>
+									<option value="FM">Micronesia, Federated States of</option>
+									<option value="MD">Moldova, Republic of</option>
+									<option value="MC">Monaco</option>
+									<option value="MN">Mongolia</option>
+									<option value="ME">Montenegro</option>
+									<option value="MS">Montserrat</option>
+									<option value="MA">Morocco</option>
+									<option value="MZ">Mozambique</option>
+									<option value="MM">Myanmar</option>
+									<option value="NA">Namibia</option>
+									<option value="NR">Nauru</option>
+									<option value="NP">Nepal</option>
+									<option value="NL">Netherlands</option>
+									<option value="NC">New Caledonia</option>
+									<option value="NZ">New Zealand</option>
+									<option value="NI">Nicaragua</option>
+									<option value="NE">Niger</option>
+									<option value="NG">Nigeria</option>
+									<option value="NU">Niue</option>
+									<option value="NF">Norfolk Island</option>
+									<option value="MP">Northern Mariana Islands</option>
+									<option value="NO">Norway</option>
+									<option value="OM">Oman</option>
+									<option value="PK">Pakistan</option>
+									<option value="PW">Palau</option>
+									<option value="PS">Palestinian Territory, Occupied</option>
+									<option value="PA">Panama</option>
+									<option value="PG">Papua New Guinea</option>
+									<option value="PY">Paraguay</option>
+									<option value="PE">Peru</option>
+									<option value="PH">Philippines</option>
+									<option value="PN">Pitcairn</option>
+									<option value="PL">Poland</option>
+									<option value="PT">Portugal</option>
+									<option value="PR">Puerto Rico</option>
+									<option value="QA">Qatar</option>
+									<option value="RE">Réunion</option>
+									<option value="RO">Romania</option>
+									<option value="RU">Russian Federation</option>
+									<option value="RW">Rwanda</option>
+									<option value="BL">Saint Barthélemy</option>
+									<option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+									<option value="KN">Saint Kitts and Nevis</option>
+									<option value="LC">Saint Lucia</option>
+									<option value="MF">Saint Martin (French part)</option>
+									<option value="PM">Saint Pierre and Miquelon</option>
+									<option value="VC">Saint Vincent and the Grenadines</option>
+									<option value="WS">Samoa</option>
+									<option value="SM">San Marino</option>
+									<option value="ST">Sao Tome and Principe</option>
+									<option value="SA">Saudi Arabia</option>
+									<option value="SN">Senegal</option>
+									<option value="RS">Serbia</option>
+									<option value="SC">Seychelles</option>
+									<option value="SL">Sierra Leone</option>
+									<option value="SG">Singapore</option>
+									<option value="SX">Sint Maarten (Dutch part)</option>
+									<option value="SK">Slovakia</option>
+									<option value="SI">Slovenia</option>
+									<option value="SB">Solomon Islands</option>
+									<option value="SO">Somalia</option>
+									<option value="ZA">South Africa</option>
+									<option value="GS">South Georgia and the South Sandwich Islands</option>
+									<option value="SS">South Sudan</option>
+									<option value="ES">Spain</option>
+									<option value="LK">Sri Lanka</option>
+									<option value="SD">Sudan</option>
+									<option value="SR">Suriname</option>
+									<option value="SJ">Svalbard and Jan Mayen</option>
+									<option value="SZ">Swaziland</option>
+									<option value="SE">Sweden</option>
+									<option value="CH">Switzerland</option>
+									<option value="SY">Syrian Arab Republic</option>
+									<option value="TW">Taiwan, Province of China</option>
+									<option value="TJ">Tajikistan</option>
+									<option value="TZ">Tanzania, United Republic of</option>
+									<option value="TH">Thailand</option>
+									<option value="TL">Timor-Leste</option>
+									<option value="TG">Togo</option>
+									<option value="TK">Tokelau</option>
+									<option value="TO">Tonga</option>
+									<option value="TT">Trinidad and Tobago</option>
+									<option value="TN">Tunisia</option>
+									<option value="TR">Turkey</option>
+									<option value="TM">Turkmenistan</option>
+									<option value="TC">Turks and Caicos Islands</option>
+									<option value="TV">Tuvalu</option>
+									<option value="UG">Uganda</option>
+									<option value="UA">Ukraine</option>
+									<option value="AE">United Arab Emirates</option>
+									<option value="GB">United Kingdom</option>
+									<option value="US">United States</option>
+									<option value="UM">United States Minor Outlying Islands</option>
+									<option value="UY">Uruguay</option>
+									<option value="UZ">Uzbekistan</option>
+									<option value="VU">Vanuatu</option>
+									<option value="VE">Venezuela, Bolivarian Republic of</option>
+									<option value="VN">Viet Nam</option>
+									<option value="VG">Virgin Islands, British</option>
+									<option value="VI">Virgin Islands, U.S.</option>
+									<option value="WF">Wallis and Futuna</option>
+									<option value="EH">Western Sahara</option>
+									<option value="YE">Yemen</option>
+									<option value="ZM">Zambia</option>
+									<option value="ZW">Zimbabwe</option>
+								</select>
+								<i class="icon">&#9660;</i>
+							</div>
+						</div>
+
+
+						<div class="flex_row">
+							<!-- State -->
+							<div class="form_cell half" >
+								<label for="CP_State">STATE*</label>
+								<div class="select-wrapper">
+									<select id="CP_State" name="CP_State" runat="server">
+										<option disabled selected  ></option>
+										<option value="AL">Alabama</option>
+										<option value="AK">Alaska</option>
+										<option value="AZ">Arizona</option>
+										<option value="AR">Arkansas</option>
+										<option value="CA">California</option>
+										<option value="CO">Colorado</option>
+										<option value="CT">Connecticut</option>
+										<option value="DE">Delaware</option>
+										<option value="DC">District Of Columbia</option>
+										<option value="FL">Florida</option>
+										<option value="GA">Georgia</option>
+										<option value="HI">Hawaii</option>
+										<option value="ID">Idaho</option>
+										<option value="IL">Illinois</option>
+										<option value="IN">Indiana</option>
+										<option value="IA">Iowa</option>
+										<option value="KS">Kansas</option>
+										<option value="KY">Kentucky</option>
+										<option value="LA">Louisiana</option>
+										<option value="ME">Maine</option>
+										<option value="MD">Maryland</option>
+										<option value="MA">Massachusetts</option>
+										<option value="MI">Michigan</option>
+										<option value="MN">Minnesota</option>
+										<option value="MS">Mississippi</option>
+										<option value="MO">Missouri</option>
+										<option value="MT">Montana</option>
+										<option value="NE">Nebraska</option>
+										<option value="NV">Nevada</option>
+										<option value="NH">New Hampshire</option>
+										<option value="NJ">New Jersey</option>
+										<option value="NM">New Mexico</option>
+										<option value="NY">New York</option>
+										<option value="NC">North Carolina</option>
+										<option value="ND">North Dakota</option>
+										<option value="OH">Ohio</option>
+										<option value="OK">Oklahoma</option>
+										<option value="OR">Oregon</option>
+										<option value="PA">Pennsylvania</option>
+										<option value="RI">Rhode Island</option>
+										<option value="SC">South Carolina</option>
+										<option value="SD">South Dakota</option>
+										<option value="TN">Tennessee</option>
+										<option value="TX">Texas</option>
+										<option value="UT">Utah</option>
+										<option value="VT">Vermont</option>
+										<option value="VA">Virginia</option>
+										<option value="WA">Washington</option>
+										<option value="WV">West Virginia</option>
+										<option value="WI">Wisconsin</option>
+										<option value="WY">Wyoming</option>
+									</select>				
+									<i class="icon">&#9660;</i>
+								</div>	
+							</div>
+
+							<!-- ZIP Code - Can also change label to Postal Code-->
+							<div class="form_cell half">
+								<label for="CP_ZipCode">ZIP CODE*</label>
+								
+								<input id="CP_ZipCode" class="guinness-form-input" name="CP_ZipCode" type="text" placeholder="" required="required" runat="server" />
+								
+								<div id="Zip_Error" class="Zip_Error valWarning">
+									Please enter your zip code
+								</div>
+							</div>
+
+							<!-- ZIP Code - With more validation -->
+							<!-- <div class="form_cell half">
+								<label for="CP_ZipCode">ZIP CODE*</label>
+								
+								<input id="CP_ZipCode" class="guinness-form-input" name="CP_ZipCode" onfocusout="fixZipNumber()" pattern="[0-9]+" maxlength="5" type="text" placeholder="" required="required" runat="server" />
+								
+								<div id="Zip_Error" class="Zip_Error valWarning">
+									Please enter your 5 digit zip code
+								</div>
+							</div> -->
+						</div>
+
+						
+
+						<!-- Date of Birth -->
+						<div class="form_cell">
+							<label for="CP_DOB">DATE OF BIRTH*</label>
+							
+							<input id="CP_DOB" class="guinness-form-input" name="CP_DOB" type="text" runat="server" placeholder="" required pattern="([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))"
+							title="YYYY-MM-DD" autocomplete="off" readonly />
+							
+							<div id="DOB_Error" class="DOB_Error valWarning">
+								You must be at least 21 years old to enter.
+							</div>
+						</div>
+
+				
+						<!-- Email -->
+						<div class="form_cell">
+							<label for="CP_EmailId">EMAIL*</label>
+
+							<input id="CP_EmailId" name="CP_EmailId" maxlength="100" class="guinness-form-input" type="email" placeholder="" required="required" runat="server" />
+
+							<input id="HD_EmailType" name="HD_EmailType" runat="server" type="hidden" value="1" />
+						</div>
+						
+						<!-- Free Text Field -->
+						<div class="form_cell column">
+							<label for="PR_4_90_1_freetext">To be entered to instead win a contest prize, including an experience, fill out the below and also upload a photo if you'd like.*</label> 
+
+							<p id="charNum">0 characters out of 200</p>
+
+							<input id="PR_4_90_1_freetext" name="PR_4_90_1_freetext" type="text" class="guinness-form-input"  maxlength="200" placeholder="LONG FORM TEXT INPUT WITH CHARACTER COUNT/LIMIT" runat="server" onkeyup="countChars(this);" />
+
+						</div>
+
+						<!-- Image Upload -->
+						<div class="form_cell column" id="imageUpload">
+							<div class="guinness-form-input">
+								<label for="CP_image" class="button">
+									UPLOAD PHOTO
+								</label>
+								<input type="file" id="CP_image" class="" name="CP_image" accept="image/*" onchange="checkImage()" id="formImage" value="" />
+							</div>
+
+							<div id="img_fileName"></div>
+
+							<div id="file-error" class="file__invalid hide">
+								* Invalid filename, please try adding another image
+							</div>
+						</div>
+
+
+						<!-- Checkboxes -->
+						<div class=" accept">
+							
+							<!-- Terms & Conditions -->
+							<div class="terms">
+								<label for="tc">
+									<input id="tc" class="checkbox-custom" type="checkbox" name="tc" value="1" required />
+									<span>I accept the <a href="/legal-rules.pdf" target="_blank">rules</a>, <a href="https://footer.diageohorizon.com/dfs/assets/www.baileys.com/TnC_en.html?locale=en-gb" target="_blank" >conditions of use</a> and <a href="https://footer.diageohorizon.com/dfs/assets/www.baileys.com/PrivacyPolicy_en.html?locale=en-gb" target="_blank">privacy and cookie notice</a> .*</span>
+								</label>
+
+								<br/>
+
+								<!-- Newsletter -->
+								<label for="PR_1_64_1">
+									<input id="PR_1_64_1" class="checkbox-custom" type="checkbox" name="PR_1_64_1" value="1" />
+									<span>Click here if you would like to receive special offers and news by email. You can unsubscribe at any time</span>
+								</label>
+							</div>
+							
+
+							<br/>
+
+							<!-- Required Copy -->
+							<span class="required_copy">*Indicates required field</span>
+							
+						</div>
+
+
+						<div class="eligible-copy">
+							<p>
+								Limit one entry total per person. 
+								<br/><br/>
+								NO PURCHASE NECESSARY. Must be U.S. resident 21 or older to enter. Void where prohibited. Sweepstakes begins on [START DATE] and ends [END DATE] at 11:59:59 p.m. ET. 
+								<br/><br/>
+								<a href="/legal-rules.pdf" target="_blank">Click here</a> for official rules and details.
+							</p>
+						</div>
+					
+
+						<!-- Submit -->
+						<div class="form-button">
+							<!--
+							<button class="button" type="submit">
+								SUBMIT
+							</button>
+							-->
+							<input class="button" type="submit" name="submit" value="SUBMIT">
+						</div>
+					</form>
+
+
+					<!-- After form notices -->
+					<div class="after_form">
+						<div class="after_form_inner">
+
+							<div class="rules">
+								<a href="/legal-rules.pdf" target="_blank">LEGAL RULES</a>
+							</div>
+
+							<div class="legal">
+								<p>
+									Please Enjoy Responsibly
+									<br/>
+									[BRAND PRODUCT NAME]. [PRODUCT INFORMATION]
+								</p>
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+
+
+	<!-- ============================= -->
+	<!-- RIGHT PANEL - Images, Graphics  -->
+	<!-- ============================= -->
+		<div class="right_panel panel" style="">
+			
+			<div class="right_panel_background">
+				<div class="img_panel" style="background-image: url('https://source.unsplash.com/OApeDBma_zY/');"></div>
+			</div>
+
+			<div class="right_panel_content">
+				<h3 class="heading">H3 - This area can also hold content</h3>
+
+				<p class="body_content">
+					This area is already set up to handle basic content, but feel free to comment it out if your design doesn't need it.  You can also just comment out this whole right panel, and the layout will automatically adjust to 1 centered column.				
+				</p>
+
+				<div class="custom_hr" role="presentation"></div>
+
+				<p>NOTES and BEST PRACTICES:</p>
+				<ul>
+					<li>Background Images: set the background-image src as inline CSS, and set the rest in the CSS files.</li>
+					<li>Use class names, not elements, in your CSS selectors.  This lets you easily change the element while leaving styling unaffected.</li>
+					<li>Try and keep your CSS selectors short and readable - use a parent class for the whole element while giving it's components verbose and descriptive names.</li>
+					<li>Keep good comments and documentation.  Write your code as if the next dev will have no prior knowledge of the project, and to let them jump in with minimal guidence.</li>
+				</ul>
+
+				<div class="custom_hr" role="presentation"></div>
+
+				<p>PROJECT SPECIAL FEATURES:</p>
+				<ul>
+					<li>Flash Of Unstyled Content (FOUC) prevention.</li>
+					<li>Enhanced system font stack</li>
+					<li>AutoPrefixer</li>
+					<li>Link auto-format (conditional target="_blank" and rel="noopener") (REQUIRES QA)</li>
+					<li>Custom checkbox/radio button support (COMING SOON)</li>
+					<li>Placeholder content alerts (COMING SOON)</li>
+				</ul>
+			</div>
+			
+		</div>
+
+	</div>
+
+<!-- Diageo Footer Target -->
+	<div id="footer"></div>
+
+<!-- ==========  -->
+<!-- JAVASCRIPT -->
+<!-- ==========  -->
+
+<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+ <!-- JQuery UI -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+
+  <!-- Diageo Footer Code -->
+	<script type="text/javascript">
+		jQuery.fn.load = function (callback) {
+				$(window).trigger("load", callback);
+			};
+			jQuery.fn.bind = function (callback) {
+				$(window).trigger("on", callback);
+			};
+			jQuery.fn.unbind = function (callback) {
+				$(window).trigger("off", callback);
+			};
+
+			var currentYear = new Date().getFullYear();
+
+			jQuery(document).ready(function () {
+				$("#CP_DOB").datepicker({
+					inline: true,
+					changeMonth: true,
+					changeYear: true,
+					yearRange: "1890:"+currentYear,
+					dateFormat: "yy-mm-dd",
+					autoclose: true,
+				});
+		});
+	</script>
+	
+	<script type="text/javascript" src="//footer.diageohorizon.com/dfs/master.js"></script>
+
+	<!-- ================== -->
+	<!-- PRIMARY JS SCRIPTS  -->
+	<!-- ================== -->
+		<!-- build:js /scripts/form.js -->
+			<script src="/scripts/form.js"></script>
+		<!-- endbuild -->
+
+		<!-- build:js /scripts/template.js -->
+			<script src="/scripts/template.js"></script>
+		<!-- endbuild -->
+		
+		<!-- build:js /scripts/main.js -->
+			<script src="/scripts/main.js"></script>
+		<!-- endbuild -->
+	
+</body>
+
+</html>
